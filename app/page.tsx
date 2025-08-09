@@ -11,12 +11,37 @@ export default function BribbitWebsite() {
   const [copied, setCopied] = useState(false)
 
   const copyToClipboard = async () => {
-    try {
-      await navigator.clipboard.writeText(contractAddress)
+    const ok = await copyText(contractAddress)
+    if (ok) {
       setCopied(true)
-      window.setTimeout(() => setCopied(false), 1500)
+      if ("vibrate" in navigator) navigator.vibrate?.(30)
+      window.setTimeout(() => setCopied(false), 1400)
+    }
+  }
+
+  async function copyText(text: string) {
+    try {
+      if (window.isSecureContext && navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text)
+        return true
+      }
     } catch {
-      // silent fail
+      // fallback below
+    }
+    try {
+      const ta = document.createElement("textarea")
+      ta.value = text
+      ta.setAttribute("readonly", "")
+      ta.style.position = "fixed"
+      ta.style.opacity = "0"
+      ta.style.left = "-9999px"
+      document.body.appendChild(ta)
+      ta.select()
+      const ok = document.execCommand("copy")
+      document.body.removeChild(ta)
+      return ok
+    } catch {
+      return false
     }
   }
 
@@ -55,6 +80,7 @@ export default function BribbitWebsite() {
         {/* CA pill - moved into flow so it doesn't overlap header on mobile */}
         <Reveal className="mx-auto w-full max-w-[46rem]" y={-8}>
           <button
+            type="button"
             onClick={copyToClipboard}
             onKeyDown={(e) => {
               if (e.key === "Enter" || e.key === " ") {
@@ -62,9 +88,9 @@ export default function BribbitWebsite() {
                 copyToClipboard()
               }
             }}
-            aria-label="Copy contract address"
-            title="Tap to copy"
-            className="group w-full flex items-center gap-3 sm:gap-4 bg-white border-2 border-black rounded-3xl px-5 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 shadow-[0_6px_0_0_rgba(0,0,0,0.35)] active:translate-y-[1px]"
+            aria-label="Tap to copy contract address"
+            className={`group w-full max-w-[46rem] mx-auto flex items-center gap-3 sm:gap-4 bg-white border-2 border-black rounded-3xl px-5 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 shadow-[0_6px_0_0_rgba(0,0,0,0.35)] active:translate-y-[1px] transition
+      ${copied ? "ring-2 ring-green-500 ring-offset-2 ring-offset-[#3BA3FF]" : ""}`}
           >
             <span className="font-subheading text-lg sm:text-xl md:text-2xl text-black">CA :</span>
             <code className="flex-1 min-w-0 text-sm sm:text-base md:text-xl font-mono leading-snug break-all tracking-wide text-black select-none">
@@ -79,10 +105,10 @@ export default function BribbitWebsite() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 items-center mt-6">
           {/* Wordmark */}
           <Reveal className="text-center md:text-left">
-            <div className="relative mx-auto md:mx-0 w-[260px] h-[96px] sm:w-[320px] sm:h-[120px] md:w-[560px] md:h-[220px]">
+            <div className="relative mx-auto md:mx-0 w-[260px] h-[160px] sm:w-[320px] sm:h-[200px] md:w-[420px] md:h-[260px]">
               <Image
                 src="/images/bribbit-wordmark.png"
-                alt="BRIBBIT on BASE wordmark"
+                alt="BABY RIBBIT wordmark"
                 fill
                 className="object-contain drop-shadow-[0_6px_0_rgba(0,0,0,0.35)]"
                 priority
@@ -150,7 +176,7 @@ export default function BribbitWebsite() {
             <Reveal className="flex justify-center md:justify-start">
               <Image
                 src="/images/bribbit-bottle.png"
-                alt="Bribbit on Base drinking from a bottle illustration"
+                alt="Baby Ribbit drinking from a bottle logo"
                 width={480}
                 height={480}
                 className="w-56 h-56 sm:w-64 sm:h-64 md:w-[28rem] md:h-[28rem] object-contain drop-shadow-[0_8px_0_rgba(0,0,0,0.35)]"
