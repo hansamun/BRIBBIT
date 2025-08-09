@@ -152,63 +152,43 @@ export default function BribbitWebsite() {
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="bg-blue-600 border-4 border-black">
               <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center text-2xl font-highlight">
-                    1
-                  </div>
-                  <div>
-                    <p className="text-sm font-body uppercase">
-                      DOWNLOAD THE METAMASK EXTENSION FROM THE OFFICIAL WEBSITE AND INSTALL IT IN YOUR BROWSER. FUND IT
-                      BY TRANSFERRING BASED ETHEREUM FROM AN EXCHANGE OR ALTERNATIVE ON-RAMP AND SWAP IT TO BASE CHAIN.
-                    </p>
-                  </div>
+                <div>
+                  <p className="text-sm font-body uppercase">
+                    DOWNLOAD THE METAMASK EXTENSION FROM THE OFFICIAL WEBSITE AND INSTALL IT IN YOUR BROWSER. FUND IT BY
+                    TRANSFERRING BASED ETHEREUM FROM AN EXCHANGE OR ALTERNATIVE ON-RAMP AND SWAP IT TO BASE CHAIN.
+                  </p>
                 </div>
               </CardContent>
             </Card>
 
             <Card className="bg-blue-600 border-4 border-black">
               <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center text-2xl font-highlight">
-                    2
-                  </div>
-                  <div>
-                    <p className="text-sm font-body uppercase">
-                      GO TO UNISWAP{"'"}S WEBSITE AND CONNECT YOUR METAMASK WALLET.
-                    </p>
-                  </div>
+                <div>
+                  <p className="text-sm font-body uppercase">
+                    GO TO UNISWAP{"'"}S WEBSITE AND CONNECT YOUR METAMASK WALLET.
+                  </p>
                 </div>
               </CardContent>
             </Card>
 
             <Card className="bg-blue-600 border-4 border-black">
               <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center text-2xl font-highlight">
-                    3
-                  </div>
-                  <div>
-                    <p className="text-sm font-body uppercase">
-                      TO SWAP BASE FOR $BRIBBIT, SELECT BASE IN THE FROM FIELD AND CHOOSE $BRIBBIT IN THE TO FIELD USING
-                      OUR CONTRACT ADDRESS. ENTER THE AMOUNT OF TOKENS YOU WANT &amp; PRESS SWAP.
-                    </p>
-                  </div>
+                <div>
+                  <p className="text-sm font-body uppercase">
+                    TO SWAP BASE FOR $BRIBBIT, SELECT BASE IN THE FROM FIELD AND CHOOSE $BRIBBIT IN THE TO FIELD USING
+                    OUR CONTRACT ADDRESS. ENTER THE AMOUNT OF TOKENS YOU WANT &amp; PRESS SWAP.
+                  </p>
                 </div>
               </CardContent>
             </Card>
 
             <Card className="bg-blue-600 border-4 border-black">
               <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center text-2xl font-highlight">
-                    4
-                  </div>
-                  <div>
-                    <p className="text-sm font-body uppercase">
-                      VERIFY YOUR TRANSACTION STATUS IN METAMASK UNDER THE ACTIVITY TAB OR ON BASESCAN USING YOUR BASE
-                      ADDRESS. IMPORT THE TOKEN TO YOUR METAMASK BY PASTING THE CONTRACT ADDRESS.
-                    </p>
-                  </div>
+                <div>
+                  <p className="text-sm font-body uppercase">
+                    VERIFY YOUR TRANSACTION STATUS IN METAMASK UNDER THE ACTIVITY TAB OR ON BASESCAN USING YOUR BASE
+                    ADDRESS. IMPORT THE TOKEN TO YOUR METAMASK BY PASTING THE CONTRACT ADDRESS.
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -218,18 +198,18 @@ export default function BribbitWebsite() {
 
       {/* NFT */}
       <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-5xl md:text-6xl font-heading mb-8 text-blue-300">NFTS SOON</h2>
 
-          <div className="max-w-md mx-auto">
-            <Card className="bg-yellow-400 border-4 border-black">
-              <CardContent className="p-8">
-                <div className="w-full h-64 bg-gradient-to-b from-yellow-300 to-yellow-500 rounded-lg mb-4 flex items-center justify-center">
-                  <div className="text-6xl text-black font-highlight">NFT</div>
-                </div>
-                <p className="text-black font-subheading">BRIBBIT NFT Collection Coming Soon!</p>
-              </CardContent>
-            </Card>
+          <div className="mx-auto flex justify-center">
+            <Image
+              src="/images/nft-preview.png"
+              alt="BRIBBIT NFT preview: baby frog in hoodie with BRIBBIT background"
+              width={512}
+              height={512}
+              className="w-full max-w-md h-auto object-contain"
+              priority={false}
+            />
           </div>
         </div>
       </section>
