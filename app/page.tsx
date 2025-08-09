@@ -171,16 +171,16 @@ export default function BribbitWebsite() {
             </h2>
           </Reveal>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 items-stretch auto-rows-fr">
             {[
               "DOWNLOAD THE METAMASK EXTENSION FROM THE OFFICIAL WEBSITE AND INSTALL IT IN YOUR BROWSER. FUND IT BY TRANSFERRING BASED ETHEREUM FROM AN EXCHANGE OR ALTERNATIVE ON-RAMP AND SWAP IT TO BASE CHAIN.",
               "GO TO UNISWAP'S WEBSITE AND CONNECT YOUR METAMASK WALLET.",
               "TO SWAP BASE FOR $BRIBBIT, SELECT BASE IN THE FROM FIELD AND CHOOSE $BRIBBIT IN THE TO FIELD USING OUR CONTRACT ADDRESS. ENTER THE AMOUNT OF TOKENS YOU WANT & PRESS SWAP.",
               "VERIFY YOUR TRANSACTION STATUS IN METAMASK UNDER THE ACTIVITY TAB OR ON BASESCAN USING YOUR BASE ADDRESS. IMPORT THE TOKEN TO YOUR METAMASK BY PASTING THE CONTRACT ADDRESS.",
             ].map((text, i) => (
-              <Reveal key={i} delay={i * 120}>
-                <Card className="bg-blue-600 border-4 border-black">
-                  <CardContent className="p-6">
+              <Reveal key={i} delay={i * 120} className="h-full">
+                <Card className="h-full w-full rounded-2xl bg-blue-600 border-4 border-black">
+                  <CardContent className="h-full p-6 flex">
                     <p className="text-sm font-body uppercase">{text}</p>
                   </CardContent>
                 </Card>
