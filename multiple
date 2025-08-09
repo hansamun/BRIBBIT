@@ -1,0 +1,75 @@
+/// app/layout.tsx
+export const metadata = {
+  title: 'My Website',
+  description: 'Welcome to my website',
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#011A5D',
+};
+
+// app/globals.css
+/* Hide scrollbar utility for mobile horizontal nav */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+// app/page.tsx
+import React from 'react';
+
+const Page = () => {
+  return (
+    <div>
+      {/* Header - centered navigation (mobile-friendly, sticky) */}
+      <header
+        className="sticky top-0 z-50 bg-[#011A5D]/95 backdrop-blur supports-[backdrop-filter]:bg-[#011A5D]/80"
+        style={{ paddingTop: 'max(0.75rem, env(safe-area-inset-top))' }}
+      >
+        <div className="mx-auto max-w-7xl px-3 py-3">
+          <nav
+            aria-label="Primary"
+            className="mx-auto flex w-full max-w-[28rem] md:max-w-3xl items-center justify-center gap-2 md:gap-4 overflow-x-auto no-scrollbar snap-x snap-mandatory"
+          >
+            <a
+              href="#home"
+              className="snap-start bg-white text-black rounded-full px-3 py-2 md:px-4 md:py-2.5 text-sm md:text-base font-subheading hover:opacity-90 whitespace-nowrap"
+            >
+              Home
+            </a>
+            <a
+              href="#about"
+              className="snap-start bg-white text-black rounded-full px-3 py-2 md:px-4 md:py-2.5 text-sm md:text-base font-subheading hover:opacity-90 whitespace-nowrap"
+            >
+              About
+            </a>
+            <a
+              href="#how-to-buy"
+              className="snap-start bg-white text-black rounded-full px-3 py-2 md:px-4 md:py-2.5 text-sm md:text-base font-subheading hover:opacity-90 whitespace-nowrap"
+            >
+              How to Buy
+            </a>
+            <a
+              href="#join-us"
+              className="snap-start bg-white text-black rounded-full px-3 py-2 md:px-4 md:py-2.5 text-sm md:text-base font-subheading hover:opacity-90 whitespace-nowrap"
+            >
+              Join Us
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      {/* Main content */}
+      <main className="mt-16">
+        {/* Your main content here */}
+      </main>
+    </div>
+  );
+};
+
+export default Page;
