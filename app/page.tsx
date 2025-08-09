@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function BribbitWebsite() {
-  const contractAddress = "0X7779F5FEF2944A01A786227A2D9764B388BA6B2"
+  const contractAddress = "COOMING SOON"
 
   return (
     <div className="min-h-screen bg-[#011A5D] text-white overflow-x-hidden">
