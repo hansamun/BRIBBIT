@@ -25,7 +25,7 @@ const bebasNeue = Bebas_Neue({
 })
 
 export const metadata: Metadata = {
-  title: "BABY RIBBIT on BASE - Meme Coin",
+  title: "BRIBBIT on BASE",
   description: "Join the thriving community of frog lovers rallying behind Baby Ribbit the Frog",
     generator: 'v0.dev'
 }
