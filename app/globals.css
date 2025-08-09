@@ -167,3 +167,11 @@
 .mask-wolf {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
