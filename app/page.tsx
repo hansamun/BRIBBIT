@@ -168,6 +168,18 @@ export default function BribbitWebsite() {
           </Reveal>
         </div>
       </section>
+      <section id="live-chart" className="w-full px-0 py-8 md:py-12 bg-[#011A5D]">
+        <div className="w-full">
+          <iframe
+            title="Dexscreener Live Chart — BRIBBIT on BASE"
+            src="https://dexscreener.com/base/0x35fd6A1530115628b70df663F6D1d6E0Dcf75D11?embed=1&theme=dark&trades=0"
+            loading="lazy"
+            className="w-full min-h-[600px] h-[75vh] border-0"
+            style={{ display: "block", background: "#0b1221" }}
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </section>
 
       {/* Renounce / Contract Info */}
       <section className="py-12 md:py-16 px-3 scroll-mt-20">
