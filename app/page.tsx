@@ -90,7 +90,7 @@ export default function BribbitWebsite() {
             }}
             aria-label="Tap to copy contract address"
             className={`group w-full max-w-[46rem] mx-auto flex items-center gap-3 sm:gap-4 bg-white border-2 border-black rounded-3xl px-5 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 shadow-[0_6px_0_0_rgba(0,0,0,0.35)] active:translate-y-[1px] transition
-      ${copied ? "ring-2 ring-green-500 ring-offset-2 ring-offset-[#3BA3FF]" : ""}`}
+    ${copied ? "ring-2 ring-green-500 ring-offset-2 ring-offset-[#3BA3FF]" : ""}`}
           >
             <span className="font-subheading text-lg sm:text-xl md:text-2xl text-black">CA :</span>
             <code className="flex-1 min-w-0 text-sm sm:text-base md:text-xl font-mono leading-snug break-all tracking-wide text-black select-none">
@@ -168,16 +168,16 @@ export default function BribbitWebsite() {
           </Reveal>
         </div>
       </section>
-      <section id="live-chart" className="w-full px-0 py-8 md:py-12 bg-[#011A5D]">
-        <div className="w-full">
-          <iframe
-            title="Dexscreener Live Chart — BRIBBIT on BASE"
-            src="https://dexscreener.com/base/0x35fd6A1530115628b70df663F6D1d6E0Dcf75D11?embed=1&theme=dark&trades=0"
-            loading="lazy"
-            className="w-full min-h-[600px] h-[75vh] border-0"
-            style={{ display: "block", background: "#0b1221" }}
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+      <section id="live-chart" className="py-8 md:py-12 scroll-mt-20">
+        <div className="w-full px-3">
+          <div id="dexscreener-embed" aria-label="Dexscreener Live Chart">
+            <iframe
+              title="Dexscreener Live Chart — Base"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              src="https://dexscreener.com/base/0x35fd6A1530115628b70df663F6D1d6E0Dcf75D11?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+            ></iframe>
+          </div>
         </div>
       </section>
 

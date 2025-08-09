@@ -175,3 +175,31 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
+
+/* Dexscreener responsive embed */
+#dexscreener-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 125%; /* lebih tinggi di mobile */
+  background: #0b1221; /* backdrop gelap saat loading */
+  border-radius: 8px;
+  overflow: hidden; /* round iframe corners */
+}
+@media (min-width: 640px) {
+  #dexscreener-embed {
+    padding-bottom: 85%;
+  }
+}
+@media (min-width: 1400px) {
+  #dexscreener-embed {
+    padding-bottom: 65%;
+  }
+}
+#dexscreener-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
