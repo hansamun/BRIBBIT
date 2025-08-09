@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import Reveal from "@/components/reveal"
 
 export default function BribbitWebsite() {
-  const contractAddress = "COOMING SOON"
+  const contractAddress = "0x106b3bfa5e41a4d9f4e69b5af4f518e444d0496f"
 
   return (
     <div className="min-h-screen bg-[#011A5D] text-white overflow-x-hidden">
@@ -220,9 +220,34 @@ export default function BribbitWebsite() {
                   baby of RIBBIT. From a tiny tadpole on a lily pad to a symbol of cuteness, loyalty, and unstoppable
                   baby spirit, BRIBBIT proves that starting small can lead to giant hops.
                 </p>
-                <Button className="bg-purple-600 hover:bg-purple-700 text-white font-subheading py-3 px-8 rounded-full text-xl">
-                  JOIN US!
-                </Button>
+                <div className="mt-4 flex flex-wrap items-center justify-center gap-3 md:gap-4">
+                  <Button
+                    asChild
+                    className="bg-[#229ED9] hover:bg-[#1b8fc6] text-white font-subheading py-3 px-6 rounded-full text-base md:text-lg"
+                  >
+                    <a
+                      href="https://t.me/babyribbitbase"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Telegram"
+                    >
+                      TELEGRAM
+                    </a>
+                  </Button>
+                  <Button
+                    asChild
+                    className="bg-black hover:bg-neutral-900 text-white font-subheading py-3 px-6 rounded-full text-base md:text-lg"
+                  >
+                    <a
+                      href="https://x.com/BabyRibbitBase"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Open Twitter (X)"
+                    >
+                      TWITTER
+                    </a>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </Reveal>
